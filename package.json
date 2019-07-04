@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "preinstall": "npm install pm2 -g",
-    "start":"npm run gui:dev",
-    "dev":"npm run gui:dev",
+    "start": "npm run gui:dev",
+    "dev": "npm run gui:dev",
     "gui:dev": "npm run build && NODE_ENV=development nodemon server/index.js --exec babel-node --watch server",
     "box:dev": "nodemon lib/index.js --exec babel-node",
     "clear": "rm -rf dist/box",
@@ -14,7 +14,9 @@
     "build": "webpack --progress --hide-modules --config build/webpack.box.config.js",
     "build:gui": "webpack --progress --hide-modules --config build/webpack.gui-server.config.js && prod=1 node build/build.js",
     "box": "pm2 start ./box/gxb-box.js --name gxb-box",
-    "gui": "NODE_ENV=production pm2 start ./gui-server/index.js --name gxb-gui"
+    "gui": "NODE_ENV=production pm2 start ./gui-server/index.js --name gxb-gui",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -63,7 +65,8 @@
     "vue-router": "^2.7.0",
     "vue-timeago": "^3.3.6",
     "vue-websocket": "^0.2.2",
-    "vuex": "^2.2.1"
+    "vuex": "^2.2.1",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "@types/express": "^4.0.39",
@@ -109,5 +112,6 @@
     "webpack-dev-middleware": "^1.10.0",
     "webpack-hot-middleware": "^2.18.0",
     "webpack-merge": "^4.1.0"
-  }
+  },
+  "snyk": true
 }
