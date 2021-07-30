@@ -47,7 +47,7 @@
     "gxbjs": "^1.2.59",
     "gxbjs-ws": "^1.1.17",
     "immutable": "^3.8.1",
-    "ipfs-api": "^14.0.4",
+    "ipfs-api": "^26.0.3",
     "iview": "^2.0.0-rc.13",
     "jdenticon": "^1.7.2",
     "js-sha256": "^0.7.1",
