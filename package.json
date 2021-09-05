@@ -36,7 +36,7 @@
   "dependencies": {
     "archiver": "^2.0.0",
     "async": "^2.5.0",
-    "axios": "^0.15.3",
+    "axios": "^0.21.3",
     "bluebird": "^3.5.0",
     "body-parser": "~1.13.2",
     "colors": "^1.1.2",
